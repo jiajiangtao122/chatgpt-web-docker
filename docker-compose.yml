@@ -1,5 +1,5 @@
 #注意 frontend和backend网络不互通
-version: "3"
+version: "3.9"
 
 networks:
   frontend:
@@ -55,8 +55,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: 123456
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u${MYSQL_USER}", "-p${MYSQL_PASSWORD}"]
-      interval: 5s
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1"]
+      interval: 10s
       timeout: 30s
       retries: 3
     ports:
