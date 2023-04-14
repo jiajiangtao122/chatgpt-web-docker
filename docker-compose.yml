@@ -1,0 +1,63 @@
+#注意 frontend和backend网络不互通
+version: "3.9"
+
+networks:
+  frontend:
+  backend:
+
+services:
+
+  chatgpt-web:
+    image: jiajiangtao122/chatgpt-web
+    container_name: chatgpt-web
+    networks:
+       backend:
+        aliases:
+          - chatgpt-web.serv
+       frontend:
+        aliases:
+          - chatgpt-web.app
+    volumes:
+      - ./.env:/app/.env:ro
+    depends_on:
+      mysql:
+        condition: service_healthy
+
+  nginx:
+    image: nginx:1.24
+    container_name: nginx
+    networks:
+       frontend:
+        aliases:
+          - nginx.app
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+      - ./logs:/var/log/nginx
+      - ./chatgpt-web:/www
+    ports:
+      - "80:80"
+      - "443:443"
+    depends_on:
+      - chatgpt-web
+
+  mysql:
+    image: mysql:5.7
+    container_name: mysql
+    networks:
+      backend:
+        aliases:
+          - mysql.serv
+    volumes:
+      - ./mysql/my.cnf:/etc/mysql/my.cnf:ro
+      - ./mysql/data:/var/lib/mysql
+      - ./logs:/var/log/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1"]
+      interval: 10s
+      timeout: 30s
+      retries: 3
+    ports:
+      - "3306:3306"
