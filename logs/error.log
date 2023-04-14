@@ -1,3 +1,0 @@
-2023/04/12 18:23:30 [emerg] 1#1: host not found in upstream "chatgpt-web.app" in /etc/nginx/conf.d/admin.conf:12
-2023/04/13 03:53:44 [emerg] 1#1: host not found in upstream "chatgpt-web.app" in /etc/nginx/conf.d/admin.conf:12
-2023/04/13 03:59:09 [emerg] 1#1: host not found in upstream "chatgpt-web.app" in /etc/nginx/conf.d/admin.conf:12
