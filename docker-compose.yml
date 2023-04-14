@@ -1,5 +1,5 @@
 #注意 frontend和backend网络不互通
-version: "3.3"
+version: "3"
 
 networks:
   frontend:
@@ -19,6 +19,9 @@ services:
           - chatgpt-web.app
     volumes:
       - ./.env:/app/.env:ro
+    depends_on:
+      mysql:
+        condition: service_healthy
 
   nginx:
     image: nginx:1.24
@@ -35,6 +38,8 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    depends_on:
+      - chatgpt-web
 
   mysql:
     image: mysql:5.7
@@ -49,5 +54,10 @@ services:
       - ./logs:/var/log/mysql
     environment:
       MYSQL_ROOT_PASSWORD: 123456
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-u${MYSQL_USER}", "-p${MYSQL_PASSWORD}"]
+      interval: 5s
+      timeout: 30s
+      retries: 3
     ports:
       - "3306:3306"
