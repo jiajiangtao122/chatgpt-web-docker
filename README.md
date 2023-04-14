@@ -20,14 +20,16 @@ docker大体上没问题 做等gouguoyin大佬更新bug后 我后续在持续跟
 
 没有安装docker和docker compose的先去安装  教程在 [https://www.pubfun.top/archives/155.html](https://www.pubfun.top/archives/155.html)
 
-```
-chmod ldj
-```
-
 首先要下载源码文件
 
 ```
-curl https://github.com/jiajiangtao122/chatgpt-web-docker/releases/download/1.0/chatgpt-web.tar.gz
+curl -O https://github.com/jiajiangtao122/chatgpt-web-docker/releases/download/1.1/chatgpt-web.tar.gz
+```
+
+或者
+
+```
+wget https://github.com/jiajiangtao122/chatgpt-web-docker/releases/download/1.0/chatgpt-web.tar.gz
 ```
 
 然后解压压缩包
@@ -48,11 +50,13 @@ cd chatgpt-web
 vim .env
 ```
 
-编辑yml文件 可改可不改 建议修改mysql的root密码  同时也要修改.env的root密码
+编辑yml文件 修改mysql的root密码  同时也要修改.env的root密码
 
 ```
 vim docker-compose.yml
 ```
+
+首次使用强烈建议修改mysql root的密码 
 
 给mysql和logs赋值权限
 
@@ -76,13 +80,19 @@ vim nginx/conf.d/admin.conf
 vim nginx/conf.d/chat.conf
 ```
 
-启动docker
+启动docker compose 进入对应的目录
 
 ```
 docker compose up -d
 ```
 
-停止docker  进入对应的目录
+重启docker compose 进入对应的目录
+
+```
+docker compose restart
+```
+
+停止docker compose 进入对应的目录
 
 ```
 docker compose down
