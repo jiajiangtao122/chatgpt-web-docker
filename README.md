@@ -42,25 +42,17 @@ tar -xzvf chatgpt-web.tar.gz
 cd chatgpt-web
 ```
 
-编辑配置文件 只需要修改邮箱相关的设置就行
+编辑配置文件 只需要修改邮箱 数据库密码相关的设置就行
 
 ```
 vim .env
 ```
-
-![image-20230414233613666](/Users/jiajiangtao/Library/Application Support/typora-user-images/image-20230414233613666.png)
-
-只需要修改标记的这些就行 别的不用动
 
 编辑yml文件 可改可不改 建议修改mysql的root密码  同时也要修改.env的root密码
 
 ```
 vim docker-compose.yml
 ```
-
-![image-20230414233409788](/Users/jiajiangtao/Library/Application Support/typora-user-images/image-20230414233409788.png)
-
-首次使用强烈建议修改mysql root的密码 
 
 给mysql和logs赋值权限
 
