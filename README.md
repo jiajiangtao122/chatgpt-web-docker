@@ -29,7 +29,7 @@ curl -O https://github.com/jiajiangtao122/chatgpt-web-docker/releases/download/1
 或者
 
 ```
-wget https://github.com/jiajiangtao122/chatgpt-web-docker/releases/download/1.0/chatgpt-web.tar.gz
+wget https://github.com/jiajiangtao122/chatgpt-web-docker/releases/download/1.1/chatgpt-web.tar.gz
 ```
 
 然后解压压缩包
