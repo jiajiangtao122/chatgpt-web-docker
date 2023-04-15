@@ -14,7 +14,9 @@ docker大体上没问题 做等gouguoyin大佬更新bug后 我后续在持续跟
 
 2023-04-14 docker镜像更新到1.3版本 docker添加证书 修复邮件发送失败问题
 
+# 打个小广告 
 
+我的小店里有 普通chatgpt号 120刀api  plus 有需要可以捧场 地址 [https://faka.pubfun.top]()
 
 # 教程
 
