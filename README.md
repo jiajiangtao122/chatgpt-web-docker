@@ -82,6 +82,12 @@ vim nginx/conf.d/admin.conf
 vim nginx/conf.d/chat.conf
 ```
 
+后续试用记得先pull镜像保持最新
+
+```
+docker compose pull
+```
+
 启动docker compose 进入对应的目录
 
 ```
