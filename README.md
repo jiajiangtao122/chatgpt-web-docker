@@ -102,9 +102,12 @@ docker compose down
 
 后台登录用户名 默认账号 `245629560@qq.com`, 密码 `123456`
 
+# 补充
+
 如果自己本地有mysql的可以把  docker-compose.yml 里的mysql部分去掉（红框里的去掉）  然后修改.env里的mysql配置就行
 ![IX@R@_~GIUL%( 0IBUW8_%S](https://user-images.githubusercontent.com/48207940/232184251-bf99880e-9fc5-4bd9-a3f6-016395650c34.png)
 
+同理 如果本地有都有nginx和mysql可以把nginx 和 mysql部分都去掉用你本地的配置文件
 
 最后有其他问题的记得反馈
 
