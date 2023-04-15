@@ -18,7 +18,7 @@ docker大体上没问题 做等gouguoyin大佬更新bug后 我后续在持续跟
 
 我的小店里有 普通chatgpt号 120刀api  plus 有需要可以捧场 地址 [https://faka.pubfun.top]()
 
-# 教程
+# 首次使用教程
 
 没有安装docker和docker compose的先去安装  教程在 [https://www.pubfun.top/archives/155.html](https://www.pubfun.top/archives/155.html)
 
@@ -157,6 +157,18 @@ docker compose restart
 ```
 docker compose down
 ```
+
+# 后续更新后的使用教程
+
+后续更新docker镜像后记得  `docker compose pull ` 然后 `docker compose restart`
+
+如果有提示要更新前后台代码  需要把 `chatgpt-web` 文件夹替换到服务器
+
+如果有提示更新`db.sql` 需要把以前数据库chatgpt清空重新导入  导入教程上面有
+
+如果有提示更新`.env` 需要去服务器修改.env
+
+# 默认登录密码
 
 后台登录用户名 默认账号 `245629560@qq.com`, 密码 `123456`
 
