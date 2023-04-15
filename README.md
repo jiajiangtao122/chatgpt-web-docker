@@ -160,7 +160,7 @@ docker compose down
 
 # 后续更新后的使用教程
 
-后续更新docker镜像后记得  `docker compose pull ` 然后 `docker compose restart`
+后续更新docker镜像后记得  `docker compose pull ` 然后移除以前的旧版 `docker compose down` 最后`docker compose `
 
 如果有提示要更新前后台代码  需要把 `chatgpt-web` 文件夹替换到服务器
 
