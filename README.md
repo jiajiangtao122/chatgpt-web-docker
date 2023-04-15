@@ -88,7 +88,19 @@ vim nginx/conf.d/chat.conf
 docker compose up -d
 ```
 
-最后用mysql导入工具导入 db.sql就行了  记得数据库名字要和.env里的保持一致 默认chatgpt
+最后用mysql导入工具导入 db.sql就行了 或者docker导入也行  记得数据库名字要和.env里的保持一致 默认chatgpt
+
+首先用把sql导入到mysql容器中
+
+```
+docker cp db.sql mysql:/db.sql
+```
+
+然后进入到mysql容器中
+
+```
+docker exec -it 
+```
 
 导入成功后重启docker
 
