@@ -90,6 +90,8 @@ docker compose up -d
 
 最后用mysql导入工具导入 db.sql就行了 或者docker导入也行  记得数据库名字要和.env里的保持一致 默认chatgpt
 
+# mysql db.sql导入教程
+
 首先用把sql导入到mysql容器中
 
 ```
@@ -99,8 +101,41 @@ docker cp db.sql mysql:/db.sql
 然后进入到mysql容器中
 
 ```
-docker exec -it 
+docker exec -it mysql /bin/bash
 ```
+
+在容器中登录mysql    -p后面的密码要改成自己设置的mysql密码
+
+```
+mysql -uroot -p123456
+```
+<img width="296" alt="image" src="https://user-images.githubusercontent.com/48207940/232205213-e8527dc6-3e9c-40f0-97a6-d8a2530d9d3f.png">
+
+然后会进入到mysql界面 先创建数据库名字 chatgpt
+
+```
+CREATE DATABASE IF NOT EXISTS chatgpt
+DEFAULT CHARACTER SET utf8mb4
+DEFAULT COLLATE utf8mb4_unicode_ci;
+```
+<img width="345" alt="image" src="https://user-images.githubusercontent.com/48207940/232205514-b9b39a11-d20c-4661-8b01-92d756507468.png">
+
+然后开始导入db.sql
+
+```
+use chatgpt
+source db.sql;
+```
+<img width="162" alt="image" src="https://user-images.githubusercontent.com/48207940/232205806-0b5aa126-c16c-45a5-9e7f-dca073f97096.png">
+提示很多 Query OK 说明导入成功
+
+输入两遍exit 退出mysql  退出容器
+
+```
+exit
+```
+<img width="128" alt="image" src="https://user-images.githubusercontent.com/48207940/232205916-6ef08b59-18de-4129-b295-e6140325fa54.png">
+
 
 导入成功后重启docker
 
