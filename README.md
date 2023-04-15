@@ -1,4 +1,4 @@
-本docker来源gouguoyin大佬的chat-web项目 地址 [https://github.com/gouguoyin/chatgpt-web]()
+本docker来源gouguoyin大佬的chat-web项目 地址 [https://github.com/gouguoyin/chatgpt-web](https://github.com/gouguoyin/chatgpt-web)
 
 chatgpt-web的docker版目前 arm架构有问题  amd64可以正常用
 
@@ -16,7 +16,7 @@ docker大体上没问题 做等gouguoyin大佬更新bug后 我后续在持续跟
 
 # 打个小广告 
 
-我的小店里有 普通chatgpt号 120刀api  plus 有需要可以捧场 地址 [https://faka.pubfun.top]()
+我的小店里有 普通chatgpt号 120刀api  plus 有需要可以捧场 地址 [https://faka.pubfun.top](https://faka.pubfun.top)
 
 # 首次使用教程
 
