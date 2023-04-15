@@ -86,19 +86,22 @@ vim nginx/conf.d/chat.conf
 docker compose up -d
 ```
 
+最后用mysql导入工具导入 db.sql就行了  记得数据库名字要和.env里的保持一致 默认chatgpt
+
+导入成功后重启docker
+
 重启docker compose 进入对应的目录
 
 ```
 docker compose restart
 ```
 
+如果要停止docker
 停止docker compose 进入对应的目录
 
 ```
 docker compose down
 ```
-
-最后用mysql导入工具导入 db.sql就行了  记得数据库名字要和.env里的保持一致 默认chatgpt
 
 后台登录用户名 默认账号 `245629560@qq.com`, 密码 `123456`
 
