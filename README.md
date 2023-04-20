@@ -1,6 +1,6 @@
 本docker来源gouguoyin大佬的chat-web项目 地址 [https://github.com/gouguoyin/chatgpt-web](https://github.com/gouguoyin/chatgpt-web)
 
-chatgpt-web的docker版目前 arm架构有问题  amd64可以正常用
+chatgpt-web的docker版目前 arm的mysql5.7镜像好像没有 可以使用mysql8.0镜像  amd64可以正常用
 
 docker大体上没问题 做等gouguoyin大佬更新bug后 我后续在持续跟进
 
@@ -12,7 +12,7 @@ docker大体上没问题 做等gouguoyin大佬更新bug后 我后续在持续跟
 
 有其他问题后序在补充
 
-2023-04-15 docker镜像更新到1.4版本 
+2023-04-19 docker镜像更新到1.5版本 
 
 # 打个小广告 
 
@@ -160,7 +160,7 @@ docker compose down
 
 # 后续更新后的使用教程
 
-后续更新docker镜像后记得  `docker compose pull ` 然后移除以前的旧版 `docker compose down` 最后`docker compose -d`
+后续更新docker镜像后记得  `docker compose pull ` 然后移除以前的旧版 `docker compose down` 最后`docker compose up -d`
 
 如果有提示要更新前后台代码  需要把 `chatgpt-web` 文件夹替换到服务器
 
