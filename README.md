@@ -1,6 +1,6 @@
 本docker来源gouguoyin大佬的chat-web项目 地址 [https://github.com/gouguoyin/chatgpt-web](https://github.com/gouguoyin/chatgpt-web)
 
-chatgpt-web的docker版目前 arm的mysql5.7镜像好像没有 可以使用mysql8.0镜像  amd64可以正常用
+chatgpt-web的docker版目前arm64和amd64 都可以正常使用 
 
 docker大体上没问题 做等gouguoyin大佬更新bug后 我后续在持续跟进
 
@@ -25,13 +25,13 @@ docker大体上没问题 做等gouguoyin大佬更新bug后 我后续在持续跟
 首先要下载源码文件
 
 ```
-curl -O https://github.com/jiajiangtao122/chatgpt-web-docker/releases/download/1.4/chatgpt-web.tar.gz
+curl -O https://github.com/jiajiangtao122/chatgpt-web-docker/releases/download/1.5/chatgpt-web.tar.gz
 ```
 
 或者
 
 ```
-wget https://github.com/jiajiangtao122/chatgpt-web-docker/releases/download/1.4/chatgpt-web.tar.gz
+wget https://github.com/jiajiangtao122/chatgpt-web-docker/releases/download/1.5/chatgpt-web.tar.gz
 ```
 
 然后解压压缩包
@@ -66,12 +66,6 @@ vim docker-compose.yml
 chmod -R 777 logs mysql/data
 ```
 
-同时给mysql配置文件设置权限防止报错
-
-```
-chmod -R 633 mysql/my.cnf
-```
-
 编辑nginx配置文件 把域名换成自己的域名
 
 ```
@@ -80,12 +74,6 @@ vim nginx/conf.d/admin.conf
 
 ```
 vim nginx/conf.d/chat.conf
-```
-
-后续试用记得先pull镜像保持最新
-
-```
-docker compose pull
 ```
 
 启动docker compose 进入对应的目录

@@ -42,22 +42,21 @@ services:
       - chatgpt-web
 
   mysql:
-    image: mysql:5.7
+    image: bitnami/mysql:5.7
     container_name: mysql
     networks:
       backend:
         aliases:
           - mysql.serv
     volumes:
-      - ./mysql/my.cnf:/etc/mysql/my.cnf:ro
-      - ./mysql/data:/var/lib/mysql
-      - ./logs:/var/log/mysql
+      - ./mysql/data:/bitnami/mysql/data
     environment:
+      MYSQL_MASTER_HOST: "%"
       MYSQL_ROOT_PASSWORD: 123456
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1"]
-      interval: 10s
-      timeout: 30s
-      retries: 3
+      test: ["CMD", "/opt/bitnami/scripts/mysql/healthcheck.sh"]
+      interval: 15s
+      timeout: 5s
+      retries: 6
     ports:
       - "3306:3306"
