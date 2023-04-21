@@ -82,8 +82,16 @@ vim nginx/conf.d/chat.conf
 docker compose up -d
 ```
 
-最后用mysql导入工具导入 db.sql就行了 或者docker导入也行  记得数据库名字要和.env里的保持一致 默认chatgpt
+最后用mysql导入工具导入 db.sql就行了 或者docker导入也行  记得数据库名字要和.env里的保持一致 默认chatgpt 然后停止docker  在重新启动
 
+停止
+```
+docker compose down
+```
+启动
+```
+docker compose up -d
+```
 # mysql db.sql导入教程
 
 首先用把sql导入到mysql容器中
@@ -135,15 +143,13 @@ exit
 
 重启docker compose 进入对应的目录
 
-```
-docker compose restart
-```
-
-如果要停止docker
-停止docker compose 进入对应的目录
-
+停止
 ```
 docker compose down
+```
+启动
+```
+docker compose up -d
 ```
 
 # 后续更新后的使用教程
@@ -169,7 +175,6 @@ docker compose down
 同理 如果本地有都有nginx和mysql可以把nginx 和 mysql部分都去掉用你本地的配置文件
 
 最后有其他问题的记得反馈
-
 
 
 
