@@ -25,13 +25,13 @@ docker大体上没问题 做等gouguoyin大佬更新bug后 我后续在持续跟
 首先要下载源码文件
 
 ```
-curl -O https://github.com/jiajiangtao122/chatgpt-web-docker/releases/download/1.5/chatgpt-web.tar.gz
+curl -O https://github.com/jiajiangtao122/chatgpt-web-docker/releases/download/1.6/chatgpt-web.tar.gz
 ```
 
 或者
 
 ```
-wget https://github.com/jiajiangtao122/chatgpt-web-docker/releases/download/1.5/chatgpt-web.tar.gz
+wget https://github.com/jiajiangtao122/chatgpt-web-docker/releases/download/1.6/chatgpt-web.tar.gz
 ```
 
 然后解压压缩包
