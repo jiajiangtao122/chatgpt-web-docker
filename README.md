@@ -12,11 +12,11 @@ docker大体上没问题 做等gouguoyin大佬更新bug后 我后续在持续跟
 
 有其他问题后序在补充
 
-2023-04-19 docker镜像更新到1.5版本 
+2023-04-25 docker镜像更新到1.6版本 1.6版暂时只支持amd64  arm等后续更新
 
 # 打个小广告 
 
-我的小店里有 普通chatgpt号 120刀api  plus 有需要可以捧场 地址 [https://faka.pubfun.top](https://faka.pubfun.top)
+我的小店里有 普通chatgpt号 120刀api  plus 有需要可以捧场 地址 [https://fk.xt666.cc](https://fk.xt666.cc)
 
 # 首次使用教程
 
@@ -175,7 +175,6 @@ docker compose up -d
 同理 如果本地有都有nginx和mysql可以把nginx 和 mysql部分都去掉用你本地的配置文件
 
 最后有其他问题的记得反馈
-
 
 
 
